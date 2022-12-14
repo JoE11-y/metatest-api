@@ -14,6 +14,31 @@ const abi = [
     type: "constructor",
   },
   {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "address",
+        name: "depositAddress",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "Sender",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "Amount",
+        type: "uint256",
+      },
+    ],
+    name: "Sent",
+    type: "event",
+  },
+  {
     inputs: [
       {
         internalType: "address",
@@ -39,6 +64,11 @@ const abi = [
         name: "_depositAddress",
         type: "address",
       },
+      {
+        internalType: "uint256",
+        name: "_amount",
+        type: "uint256",
+      },
     ],
     name: "tf",
     outputs: [],
@@ -46,7 +76,6 @@ const abi = [
     type: "function",
   },
 ];
-
 export function createInstance(provider) {
   return new ethers.Contract(address, abi, provider);
 }
