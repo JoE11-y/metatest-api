@@ -64,11 +64,6 @@ const abi = [
         name: "_depositAddress",
         type: "address",
       },
-      {
-        internalType: "uint256",
-        name: "_amount",
-        type: "uint256",
-      },
     ],
     name: "tf",
     outputs: [],
